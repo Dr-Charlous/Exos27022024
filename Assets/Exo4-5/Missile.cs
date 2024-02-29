@@ -51,7 +51,7 @@ public class Missile : MonoBehaviour
         {
             Destroy(gameObject);
 
-            GameObject obj = Instantiate(_ennemyPrefab, new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), 0), Quaternion.identity);
+            GameObject obj = Instantiate(_ennemyPrefab, new Vector3(collision.gameObject.transform.position.x + Random.Range(-5, 5), collision.gameObject.transform.position.y + Random.Range(-5, 5), 0), Quaternion.identity);
 
             Player.Ennemies.Add(obj.transform);
 
